@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.imageio.ImageIO;
 
 public class SpriteSheet {
@@ -19,8 +20,8 @@ public class SpriteSheet {
         spriteSize = new Dimension( spriteWidth, spriteHeight );
     }
     
-    public void loadSpriteSheet( File spriteSheetImage ) throws IOException {
-        spriteSheet = ImageIO.read( spriteSheetImage );
+    public void loadSpriteSheet(  ) throws IOException {
+        spriteSheet = ImageIO.read( SpriteSheet.class.getResource( "./spritesheets/car.png" ) );
     }
     
     public void setActiveSprite( int spritePosition ) {

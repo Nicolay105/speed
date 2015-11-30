@@ -19,12 +19,12 @@ public class GameBoard extends JPanel {
         setPreferredSize( new Dimension( GameWindow.WIDTH, GameWindow.HEIGHT ) );
         setDoubleBuffered( true );
         
-        File carSpriteSheet = new File( "/spritesheets/car.png" );
         GameBoardObject car = new Car(  );
-        car.spriteSheet.loadSpriteSheet( carSpriteSheet );
+        car.spriteSheet.loadSpriteSheet(  );
         car.spriteSheet.setSpriteSize( 20, 20 );
         
         gameBoardObjects.add( car );
+        repaint(  );
     }
     
     @Override
